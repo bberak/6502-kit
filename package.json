@@ -1,0 +1,30 @@
+{
+  "name": "6502-kit",
+  "version": "1.0.0",
+  "description": "A repo with tools for building programs that run on the MOS 6502/6510 and WDC 65c02 CPUs",
+  "scripts": {
+    "setup": "run-script-os",
+    "setup:darwin": "brew install acme vice minipro && true",
+    "setup:win32": "choco install winvice -y",
+    "acme": "run-script-os",
+    "acme:darwin": "mkdir -p build && acme --cpu 65c02 --format plain",
+    "acme:win32": "(mkdir build) & tools\\acme-assembler\\acme.exe --cpu 65c02 --format plain",
+    "minipro": "run-script-os",
+    "minipro:darwin": "minipro -p AT28C256 -w",
+    "minipro:win32": "tools\\minipro\\minipro.exe -p AT28C256 -w",
+    "vice": "x64sc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bberak/6502-kit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bberak/6502-kit/issues"
+  },
+  "homepage": "https://github.com/bberak/6502-kitd#readme",
+  "devDependencies": {
+    "run-script-os": "^1.1.1"
+  }
+}
