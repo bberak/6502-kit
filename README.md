@@ -30,7 +30,6 @@ Then, install prerequisites:
 
 ```
 npm install
-npm run setup
 ```
 
 ## Assembling

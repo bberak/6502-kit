@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A repo with tools for building programs that run on the MOS 6502/6510 and WDC 65c02 CPUs",
   "scripts": {
-    "setup": "run-script-os",
-    "setup:darwin": "brew install acme vice minipro && true",
-    "setup:win32": "choco install winvice -y",
+    "postinstall": "run-script-os",
+    "postinstall:darwin": "brew install acme vice minipro && true",
+    "postinstall:win32": "choco install winvice -y",
     "acme": "run-script-os",
     "acme:darwin": "mkdir -p build && acme --cpu 65c02 --format plain",
     "acme:win32": "(mkdir build) & tools\\acme-assembler\\acme.exe --cpu 65c02 --format plain",
