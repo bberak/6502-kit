@@ -32,7 +32,17 @@ Then, install prerequisites:
 npm install
 ```
 
-## Assembling
+## Tools
+
+This project will make the following tools available via the **npm scripts** (for MacOS and Windows):
+
+- [ACME Assembler](https://sourceforge.net/projects/acme-crossass/)
+- [VICE Emulator](https://vice-emu.sourceforge.io/)
+- [Minipro Chip Programmer](https://gitlab.com/DavidGriffith/minipro/)
+
+You can read more about the functionality of each tool below.
+
+### Assembling
 
 Build assembly files with:
 
@@ -48,7 +58,7 @@ By convention, `.asm` files should indicate their output paths using a macro at 
 !to "build/file.prg"
 ```
 
-## Emulating (for Commodore 64 only)
+### Emulating (for Commodore 64 only)
 
 After assembling is complete, you can run your program on the vice emulator using:
 
@@ -58,7 +68,7 @@ npm run vice build/file.prg
 
 > You will most likely need to change the assembly instruction set to `6510` see above.
 
-## Writing to EEPROMs 
+### Writing to EEPROMs 
 
 To write your program to a ROM chip, plug your universal programmer into a spare USB port, then run:
 
