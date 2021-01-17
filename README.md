@@ -1,4 +1,4 @@
-# 6502-kit
+# 6502 Kit
 
 A repo with tools for building programs that run on the MOS 6502/6510 and WDC 65c02 CPUs 🕹️
 
